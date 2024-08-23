@@ -8,13 +8,19 @@
 	</listeners>
 	<!-- cross browser testing using parameter value -->
 	 <test name="OrangeHRM Login Page Test">
-
+	    <parameter name="browser" value="chromium"/>
       <classes>
       <class name="com.qa.orangehrm.tests.LoginPageTest"/>
       </classes>
-   </test> 
-  
+   </test>
+	<test name="OrangeHRM Login Page Test1">
+		<parameter name="browser" value="safari"/>
+		<classes>
+			<class name="com.qa.orangehrm.tests.LoginPageTest"/>
+		</classes>
+	</test>
 
-	
+
+
 
 </suite> 

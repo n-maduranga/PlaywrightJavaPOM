@@ -6,6 +6,7 @@ import com.qa.orangehrm.pages.OrangeHRMLoginPage;
 import com.qa.orangehrm.pages.OrangeHRMPIMPage;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 import java.util.Properties;
 
@@ -18,15 +19,33 @@ public class BaseTest {
     protected OrangeHRMLoginPage loginPage;
     protected OrangeHRMPIMPage pimPage;
 
+    @Parameters({"browser"})// need to give exact param name :with testng.xml
     @BeforeTest
-    public void systemSetup(){
+    public void systemSetup(String browserName){
         pft = new PlaywrightFactory();
         prop = pft.initializeProperty();
-        page= pft.initializeBrowser(prop);
+        if(browserName!=null){
+            prop.setProperty("browser",browserName); //here,set the browser property key :value of config file value
+            //using testng.xml file(ignoring what prev set in config file
+        }
+        page= pft.initializeBrowser(prop); //passing property reference enables to load all the prop details at once
         loginPage = new OrangeHRMLoginPage(page);
         homePage = new OrangeHRMHomePage(page);
     }
 
+    /*
+    Without property file browser value we can set like this
+    Here we pass the browser value to initializeBrowser method ,so it can take this as param
+     */
+   /*
+   public void systemSetup(String browser){
+        pft = new PlaywrightFactory();
+        prop = pft.initializeProperty();
+        page= pft.initializeBrowser(prop,browser); //passing property reference enables to load all the prop details at once
+        loginPage = new OrangeHRMLoginPage(page);
+        homePage = new OrangeHRMHomePage(page);
+    }
+    */
     @AfterTest
     public void tearDown() {
         page.context().browser().close();
