@@ -9,7 +9,7 @@ public class LoginPageTest extends BaseTest {
     @Test
     public void verifySuccessLogin(){
         homePage =loginPage.appLogin("Admin","admin123");
-       boolean label= homePage.verifyDashboardLabel();
+        boolean label= homePage.verifyDashboardLabel();
         Assert.assertTrue(label);
     }
 }

@@ -1,4 +1,5 @@
 package com.qa.orangehrm.base;
+import com.qa.orangehrm.pages.OrangeHRMAddEmpPage;
 import  com.qa.orangehrm.pages.OrangeHRMHomePage;
 import com.microsoft.playwright.Page;
 import com.qa.orangehrm.factory.PlaywrightFactory;
@@ -18,6 +19,7 @@ public class BaseTest {
     protected OrangeHRMHomePage homePage;
     protected OrangeHRMLoginPage loginPage;
     protected OrangeHRMPIMPage pimPage;
+    protected OrangeHRMAddEmpPage addEmpPage;
 
     @Parameters({"browser"})// need to give exact param name :with testng.xml
     @BeforeTest

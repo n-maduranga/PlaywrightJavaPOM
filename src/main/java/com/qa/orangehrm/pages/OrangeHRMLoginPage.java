@@ -32,7 +32,6 @@ public class OrangeHRMLoginPage extends PlaywrightFactory {
 
     public OrangeHRMHomePage appLogin(String username, String password)
     {
-
         page.fill(txtUserName,username);
         page.fill(txtPassword,password);
         page.click(btnLogin);

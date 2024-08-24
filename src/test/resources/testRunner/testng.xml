@@ -11,12 +11,12 @@
 	    <parameter name="browser" value="chromium"/>
       <classes>
       <class name="com.qa.orangehrm.tests.LoginPageTest"/>
-      </classes>
+	 </classes>
    </test>
-	<test name="OrangeHRM Login Page Test1">
+	<test name="OrangeHRM Add Employee Test">
 		<parameter name="browser" value="safari"/>
 		<classes>
-			<class name="com.qa.orangehrm.tests.LoginPageTest"/>
+			<class name="com.qa.orangehrm.tests.AddEmployeeTest"/>
 		</classes>
 	</test>
 

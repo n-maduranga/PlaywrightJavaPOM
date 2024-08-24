@@ -21,7 +21,6 @@ public class OrangeHRMHomePage {
         page.click(linkPIM);
         return new OrangeHRMPIMPage(page);
     }
-
     public boolean verifyDashboardLabel(){
         return page.isVisible(lblDashboard);
     }
