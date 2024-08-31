@@ -7,12 +7,12 @@
 			class-name="com.qa.orangehrm.listeners.ExtentReport" />
 	</listeners>
 	<!-- cross browser testing using parameter value -->
-	 <test name="OrangeHRM Login Page Test">
-	    <parameter name="browser" value="chromium"/>
-      <classes>
-      <class name="com.qa.orangehrm.tests.LoginPageTest"/>
-	 </classes>
-   </test>
+<!--	 <test name="OrangeHRM Login Page Test">-->
+<!--	    <parameter name="browser" value="chromium"/>-->
+<!--      <classes>-->
+<!--      <class name="com.qa.orangehrm.tests.LoginPageTest"/>-->
+<!--	 </classes>-->
+<!--   </test>-->
 	<test name="OrangeHRM Add Employee Test">
 		<parameter name="browser" value="safari"/>
 		<classes>

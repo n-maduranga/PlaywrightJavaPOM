@@ -40,7 +40,7 @@ public class ExtentReport implements ITestListener {
 
         extentReports = new ExtentReports();
         ExtentSparkReporter reporter = new ExtentSparkReporter(OUTPUT_FOLDER + FILE_NAME);
-        reporter.config().setReportName("Open Cart Automation Test Results");
+        reporter.config().setReportName("Orange HRM Test Results");
         extentReports.attachReporter(reporter);
         extentReports.setSystemInfo("System", "Windows");
         extentReports.setSystemInfo("Author", "Nuwan");

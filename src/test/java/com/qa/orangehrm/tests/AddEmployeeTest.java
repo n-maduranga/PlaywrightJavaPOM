@@ -17,5 +17,8 @@ public class AddEmployeeTest extends BaseTest {
         addEmpPage = pimPage.clickaddEmployee();
         boolean heading = addEmpPage.verifyAddEmpHeading();
         Assert.assertTrue(heading);
+        personalDetPage=addEmpPage.addEmployee("Ruwan","Sumith","Tino");
+        boolean headingPerDetPage =personalDetPage.verifyPageHeading();
+        Assert.assertTrue(headingPerDetPage);
     }
 }

@@ -1,10 +1,7 @@
 package com.qa.orangehrm.base;
-import com.qa.orangehrm.pages.OrangeHRMAddEmpPage;
-import  com.qa.orangehrm.pages.OrangeHRMHomePage;
+import com.qa.orangehrm.pages.*;
 import com.microsoft.playwright.Page;
 import com.qa.orangehrm.factory.PlaywrightFactory;
-import com.qa.orangehrm.pages.OrangeHRMLoginPage;
-import com.qa.orangehrm.pages.OrangeHRMPIMPage;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
@@ -20,6 +17,7 @@ public class BaseTest {
     protected OrangeHRMLoginPage loginPage;
     protected OrangeHRMPIMPage pimPage;
     protected OrangeHRMAddEmpPage addEmpPage;
+    protected OrangeHRMPersonalDetPage personalDetPage;
 
     @Parameters({"browser"})// need to give exact param name :with testng.xml
     @BeforeTest
@@ -32,7 +30,7 @@ public class BaseTest {
         }
         page= pft.initializeBrowser(prop); //passing property reference enables to load all the prop details at once
         loginPage = new OrangeHRMLoginPage(page);
-        homePage = new OrangeHRMHomePage(page);
+       // homePage = new OrangeHRMHomePage(page);// this is created appLogin method (new OrangeHRMHomePage(page));
     }
 
     /*
